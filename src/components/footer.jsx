@@ -6,8 +6,8 @@ function Footer() {
 
   return (
       <footer className={"py-4 text-center content-center mt-auto text-white bg-slate-800"}>
-          <div class={"w-screen flex justify-center"}>
-            <img class="h-32 w-40" src={logo} alt="slipsoap" />
+          <div className={"w-screen flex justify-center"}>
+            <img className="h-32 w-40" src={logo} alt="slipsoap" />
           </div>
           <div >
             © 2022 Copyright:
