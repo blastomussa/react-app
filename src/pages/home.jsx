@@ -6,11 +6,13 @@ import '../assets/index.css'
 const Home = () => {
     return (
         <>
-            <Header />
-            <div>    
-                <Recipe />
-            </div>
+            <div class="h-screen">
+                <Header />
+                <div>    
+                    <Recipe />
+                </div>
                 <Footer />
+            </div>
         </>
     )
 }
