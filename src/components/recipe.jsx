@@ -21,7 +21,7 @@ function Recipe() {
                         <p className="text-md font-medium text-white">{name}</p>
                         <p className="text-md text-slate-200 truncate">{description}</p>
                         <dl className=" text-white">
-                            <dt>Oils</dt>
+                            <dt className='text-sm '>Oils</dt>
                             <dd>
                                {oil}
                             </dd>
