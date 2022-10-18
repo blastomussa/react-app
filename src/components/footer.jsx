@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 function Footer() {
 
   return (
-      <footer className={"py-4 text-center content-center mt-auto text-white bg-slate-800"}>
+      <footer className={"py-4 text-center content-center mt-auto text-white bg-slate-900 "}>
           <div className={"w-screen flex justify-center"}>
             <img className="h-32 w-40" src={logo} alt="slipsoap" />
           </div>

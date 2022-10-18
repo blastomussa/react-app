@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../assets/index.css'
 import Form from '../components/form';
 import logo from '../assets/logo.png';
@@ -11,7 +10,7 @@ const Login = () => {
                 <h3 className='p-2 text-xl font-bold text-center'>Sign in</h3>
                 <h5 className='p-2 texr-lg text-center'>to continue to Soap Recipe App</h5>
                 <Form />
-                <img className="m-2 flex " src={logo}/>
+                <img className="m-2 flex " src={logo} alt="Slipsoap logo"/>
 
             </div>
        </div>
