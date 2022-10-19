@@ -1,4 +1,4 @@
-import '../assets/index.css'
+import '../assets/index.css';
 import Form from '../components/form';
 import logo from '../assets/logo.png';
 
