@@ -1,13 +1,13 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 
-const lye = 126.4
-const liquid = 264
-const weight = 800
-const name = "Recipe Name"
-const description = "A bit of a description."
-const creator = "Joe Courtney"
-const oil = "Olive oil"
+const lye = 126.4;
+const liquid = 264;
+const weight = 800;
+const name = "Recipe Name";
+const description = "A bit of a description.";
+const creator = "Joe Courtney";
+const oil = "Olive oil";
 
 
 

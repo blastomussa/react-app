@@ -10,8 +10,8 @@ function MyForm() {
     event.preventDefault();
 
     const form = new FormData();
-    form.append('username', username)
-    form.append('password', password)
+    form.append('username', username);
+    form.append('password', password);
     
 
     axios({
@@ -24,21 +24,21 @@ function MyForm() {
         //handle success
         if (response.status === 200){
           // set session cookies
-          document.cookie = `access_token=${response.data.access_token}` // may need expire and path for prod
-          document.cookie = `refresh_token=${response.data.refresh_token}` 
-          document.cookie = `username=${username}`
-          document.cookie = `logged_in=true`
-          window.location = '/'
+          document.cookie = `access_token=${response.data.access_token}`; // may need expire and path for prod
+          document.cookie = `refresh_token=${response.data.refresh_token}`;
+          document.cookie = `username=${username}`;
+          document.cookie = `logged_in=true`;
+          window.location = '/';
         }
         
       })
       .catch(function (response) {
-        setUsername('')
-        setPassword('')
+        setUsername('');
+        setPassword('');
         
         //remove all cookies one-liner
         document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
-        
+
         // handle error
         // error message 
         // shake animation?
