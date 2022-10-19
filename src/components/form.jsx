@@ -33,8 +33,13 @@ function MyForm() {
         
       })
       .catch(function (response) {
+        setUsername('')
+        setPassword('')
+        
+        //remove all cookies one-liner
+        document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+        
         // handle error
-        // reset input fields
         // error message 
         // shake animation?
         console.log(response);
@@ -43,25 +48,23 @@ function MyForm() {
   }
 
   return (
-    <form className="pt-10 flex flex-col" onSubmit={handleSubmit}>
+    <><form className="pt-10 flex flex-col" onSubmit={handleSubmit}>
       <label className="p-2 flex flex-row">Username:
-        <input 
+        <input
           className="m-auto border-2 rounded-md border-slate-200"
-          type="text" 
+          type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+          onChange={(e) => setUsername(e.target.value)} />
       </label>
       <label className="p-2 flex flex-row">Password:
-        <input 
+        <input
           className="m-auto border-2 rounded-md border-slate-200 "
-          type="password" 
+          type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          onChange={(e) => setPassword(e.target.value)} />
       </label>
-      <input className='m-auto mt-16 p-1 border-2 rounded-md bg-slate-200 border-slate-300 hover:bg-blue-200 ' type="submit"/>
-    </form>
+      <input className='m-auto mt-16 p-1 border-2 rounded-md bg-slate-200 border-slate-300 hover:bg-blue-200 ' type="submit" />
+    </form></>
   )
 }
 
