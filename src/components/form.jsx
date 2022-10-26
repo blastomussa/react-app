@@ -1,9 +1,13 @@
 import { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 
 function MyForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   
   //run().catch(console.dir);
@@ -18,7 +22,7 @@ function MyForm() {
 
     axios({
       method: "post",
-      url: "http://localhost:80/token", //THIS NEEDS TO BE CHANGED FOR PROJECT DEPLOYMENT
+      url: "http://localhost:30000/token", //THIS NEEDS TO BE CHANGED FOR PROJECT DEPLOYMENT; env for dynamic port, maybe internal k8s DNS id look into this 
       data: form,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -30,7 +34,7 @@ function MyForm() {
           document.cookie = `refresh_token=${response.data.refresh_token}`;
           document.cookie = `username=${username}`;
           document.cookie = `logged_in=true`;
-          window.location = '/home';
+          navigate('/home');
         }
         
       })
