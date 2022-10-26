@@ -1,4 +1,4 @@
-# build after `npm run-script build`
+# run after `npm run-script build`
 FROM node:18.11
 
 RUN mkdir /app
